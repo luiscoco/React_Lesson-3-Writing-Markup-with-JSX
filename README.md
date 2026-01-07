@@ -13,6 +13,8 @@ A minimal Vite + React 19 project to practice JSX concepts:
 - Shows component composition with a simple `App` container.
 - Includes styled examples (gallery, todo list) so you can see JSX output quickly.
 
+<img width="1344" height="964" alt="image" src="https://github.com/user-attachments/assets/2cca272b-99e5-4f35-9dc1-d00f1f3a112a" />
+
 ### Key JSX examples
 
 Single-root return with a Fragment:
