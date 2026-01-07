@@ -1,4 +1,4 @@
-# React JSX Playground
+# React 19.2 - Lesson 3 - JSX Playground
 
 A minimal Vite + React 19 project to practice JSX concepts:
 - Putting markup into JavaScript (JSX)
@@ -7,7 +7,47 @@ A minimal Vite + React 19 project to practice JSX concepts:
 - camelCase attributes (e.g., `className`)
 - Composing components
 
-## Quick start
+## Application features
+
+- Demonstrates JSX rules with real components (single root, self-closing tags, camelCase props).
+- Shows component composition with a simple `App` container.
+- Includes styled examples (gallery, todo list) so you can see JSX output quickly.
+
+### Key JSX examples
+
+Single-root return with a Fragment:
+
+```jsx
+export default function TodoList() {
+  return (
+    <>
+      <h2>Hedy Lamarr's Todos</h2>
+      <img src="https://i.imgur.com/yXOvdOSs.jpg" alt="Hedy Lamarr" className="photo" />
+      <ul>
+        <li>Invent new traffic lights</li>
+        <li>Rehearse a movie scene</li>
+        <li>Improve the spectrum technology</li>
+      </ul>
+    </>
+  )
+}
+```
+
+Component composition in `App`:
+
+```jsx
+export default function App() {
+  return (
+    <div className="container">
+      <Welcome />
+      <TodoList />
+      <Gallery />
+    </div>
+  )
+}
+```
+
+## How to run
 
 ```bash
 npm install
@@ -22,3 +62,15 @@ Then open the printed local URL in your browser.
 npm run build
 npm run preview
 ```
+
+## File map (purpose)
+
+- `index.html` Entry HTML with the `#root` mount node.
+- `src/main.jsx` App bootstrap: creates the React root and renders `<App />`.
+- `src/App.jsx` Page-level composition of the demo components.
+- `src/components/Welcome.jsx` Small JSX example that returns a single `<h1>`.
+- `src/components/TodoList.jsx` JSX rules demo: Fragment root, self-closing tags, camelCase props.
+- `src/components/Gallery.jsx` Larger JSX example using `<figure>` and `<img />`.
+- `src/styles.css` Styling for layout, typography, and images.
+- `vite.config.js` Vite config with the React plugin.
+- `package.json` Project metadata and scripts (`dev`, `build`, `preview`).
